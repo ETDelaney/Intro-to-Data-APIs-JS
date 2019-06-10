@@ -1,0 +1,36 @@
+// this is an okay website:
+https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners
+
+1) for your project, in the folder, type: git init
+2) whenever time to commit... type: add .
+3) then type: commit -m "add a helpful message"
+4) you may add a branch by typing: git checkout -b "branch-name"
+5) and you can check which branch you are on via typing: git branch
+6) create a github repository and then itialize without a readme
+7) you can then push a branch to there by first...
+8) git remote add origin ...
+9) git push origin branch-name
+
+https://stackoverflow.com/questions/2763006/make-the-current-git-branch-a-master-branch
+10) if you have made an un-mergeable branch which is superior to the master branch, first...
+11) make sure everything is loaded up to github, then type: git checkout master
+12) git reset --hard better-branch
+13) git push -f origin master
+
+https://stackoverflow.com/questions/22844806/how-to-change-my-git-username-in-terminal/22844895#22844895
+A) to chance the origin... you can type: git config set-url origin https://....
+B) or go into the local config file for that repo: git config -e
+C) global elements are accessible via: git config --global --list
+
+14) when switching username and using the command line for pushing, do not forget to reset the credentials:
+15) control panel --> windows credentials --> delete anything with git:https://...
+
+16) when pushing to things with ssh... makesure to use the ssh url with git:github...; else, just stick to https://
+
+https://help.github.com/en/enterprise/2.16/user/articles/adding-a-new-ssh-key-to-your-github-account
+17) to generate a security key:
+18) open git bash and see if you do not have something under .ssh for your username in windows...
+19) if not... ssh-keygen -t rsa -b 4096 -C "email address"
+20) choose the defaults
+21) clip < id_rsa-other.pub
+22) paste into github
